@@ -37,9 +37,12 @@ public class AplicacionesParaCodeWar {
             case 3:devolver = "Penny";break;
             case 4:devolver = "Rajesh";break;
             case 5:devolver = "Howard";break;
-            default:for(int i = 0; i < n; i++){
-                if((i + 1) == n)devolver = nombres.get(i);
-                else ;
+            default:for(int i = 5; i < n; i++){
+                if((i + 1) == n)devolver = nombres.get(0);
+                else {
+                    nombres.add(nombres.get(0));nombres.add(nombres.get(0));
+                    nombres.remove(nombres.get(0));
+                }
             }break;
         }
         return devolver;
