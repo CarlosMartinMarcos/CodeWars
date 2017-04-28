@@ -26,24 +26,17 @@ public class AplicacionesParaCodeWar {
     public static String WhoIsNext(String[] names, int n){
         String devolver = "";
         ArrayList<String> nombres = new ArrayList();
-        nombres.add("Sheldon");nombres.add("Sheldon");
-        nombres.add("Leonard");nombres.add("Leonard");
-        nombres.add("Penny");nombres.add("Penny");
-        nombres.add("Rajesh");nombres.add("Rajesh");
-        nombres.add("Howard");nombres.add("Howard");
-        switch (n) {
-            case 1:devolver = "Sheldon";break;
-            case 2:devolver = "Leonard";break;
-            case 3:devolver = "Penny";break;
-            case 4:devolver = "Rajesh";break;
-            case 5:devolver = "Howard";break;
-            default:for(int i = 5; i < n; i++){
-                if((i + 1) == n)devolver = nombres.get(0);
-                else {
-                    nombres.add(nombres.get(0));nombres.add(nombres.get(0));
-                    nombres.remove(nombres.get(0));
-                }
-            }break;
+        nombres.add("Sheldon");
+        nombres.add("Leonard");
+        nombres.add("Penny");
+        nombres.add("Rajesh");
+        nombres.add("Howard");
+        for(int i = 0; i < n; i++){
+            if((i + 1) == n)devolver = nombres.get(0);
+            else {
+                nombres.add(nombres.get(0));nombres.add(nombres.get(0));
+                nombres.remove(nombres.get(0));
+            }
         }
         return devolver;
     }
