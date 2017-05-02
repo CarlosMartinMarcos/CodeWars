@@ -24,20 +24,19 @@ public class AplicacionesParaCodeWar {
     }
     
     public static String WhoIsNext(String[] names, int n){
-        String devolver = "";
         ArrayList<String> nombres = new ArrayList();
         nombres.add("Sheldon");
         nombres.add("Leonard");
         nombres.add("Penny");
         nombres.add("Rajesh");
         nombres.add("Howard");
-        for(int i = 0; i < n; i++){
-            if((i + 1) == n)devolver = nombres.get(0);
-            else {
-                nombres.add(nombres.get(0));nombres.add(nombres.get(0));
-                nombres.remove(nombres.get(0));
-            }
+        int i = 0;
+        while((i + 1) < n){
+            i++;
+            nombres.add(nombres.get(0));
+            nombres.add(nombres.get(0));
+            nombres.remove(nombres.get(0));
         }
-        return devolver;
+        return nombres.get(0);
     }
 }
