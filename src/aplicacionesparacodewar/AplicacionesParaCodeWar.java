@@ -5,9 +5,13 @@
  */
 package aplicacionesparacodewar;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 import java.util.stream.IntStream;
 
 /**
@@ -39,4 +43,6 @@ public class AplicacionesParaCodeWar {
         }
         return nombres.get(0);
     }
+    
+    
 }
