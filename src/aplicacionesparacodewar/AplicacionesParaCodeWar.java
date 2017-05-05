@@ -9,6 +9,8 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -27,6 +29,7 @@ public class AplicacionesParaCodeWar {
         Scanner sc = new Scanner(System.in);
     }
     
+    //Ejercicio "Double Cola"
     public static String WhoIsNext(String[] names, int n){
         ArrayList<String> nombres = new ArrayList();
         nombres.add("Sheldon");
@@ -35,7 +38,7 @@ public class AplicacionesParaCodeWar {
         nombres.add("Rajesh");
         nombres.add("Howard");
         int i = 0;
-        while((i + 1) < n){
+        while((i + 1) <= n){
             i++;
             nombres.add(nombres.get(0));
             nombres.add(nombres.get(0));
@@ -43,6 +46,4 @@ public class AplicacionesParaCodeWar {
         }
         return nombres.get(0);
     }
-    
-    
 }
